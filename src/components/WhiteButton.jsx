@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import { Link } from 'react-router-dom';
 
 const Boton = styled.button`
     background-color: white;
@@ -14,7 +15,7 @@ const Boton = styled.button`
 
 const WhiteButton = ({texto}) => {
     return (
-        <Boton>{texto}</Boton>
+        <Link to="/conocenos"><Boton>{texto}</Boton></Link>
     );
 }
  
