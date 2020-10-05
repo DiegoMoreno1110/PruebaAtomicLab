@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom';
 const Message = ({mensaje, imagen, link}) => {
 
     const ContaineMessage = styled.div`
-        width: 30vw;
+        width: 400px;
         height: 30vh;
         margin: 0;
         position: absolute;
@@ -20,16 +20,19 @@ const Message = ({mensaje, imagen, link}) => {
         margin: 0;
         position: absolute;
         top: 20%;
-        margin-left: 13vw;
+        margin-left: 10vw;
+        width: 70px;
+        height: 70px;
     `;
 
     const Parrafo = styled.p`
         color: #FFF;
         text-align: center;
         font-size: 20px;
-        margin: 0;
         position: absolute;
         top: 60%;
+        margin-left: 0px;
+        
     `;
 
     const [show, setShow] = useState(false)

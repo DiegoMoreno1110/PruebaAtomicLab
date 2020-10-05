@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styled from "@emotion/styled";
-import OrangeButton from './OrangeButton';
 import { Link, Redirect} from 'react-router-dom';
 
 

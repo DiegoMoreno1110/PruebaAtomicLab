@@ -69,7 +69,7 @@ const CentralConocenos = ({setNextComponent, nextComponent}) => {
         })
     }
 
-    const {name, apellido} = usuario;
+    const {name} = usuario;
 
     const submitUser = e =>{
         e.preventDefault();
@@ -122,8 +122,6 @@ const CentralConocenos = ({setNextComponent, nextComponent}) => {
                 <TextField 
                     type="text" 
                     name="apellido"
-                    onChange={actualizarState}
-                    value={apellido}
                     
                 />
                 

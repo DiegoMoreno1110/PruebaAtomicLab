@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Codigo from './components/Conocenos/Codigo';
 import Conocenos from './components/Conocenos/Conocenos';
-import ContainerCodigo from './components/Conocenos/ContainerCodigo';
 import Edit from './components/Conocenos/Edit';
 import Exito from './components/Conocenos/Exito';
 import Terminos from './components/Conocenos/Terminos';
