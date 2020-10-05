@@ -50,8 +50,8 @@ const Footer = () => {
         <Container>
             <ParrafoDerechosReservados>&copy; 2020 AtomicLabs. Todos los derechos reservados</ParrafoDerechosReservados>
             <ParrafoAvisoPrivacidad>Aviso de Privacidad</ParrafoAvisoPrivacidad>
-            <ImageTwitter  src={require("../images/twitter.png")} alt="twitter_logo"></ImageTwitter>
-            <ImageLinkedIn  src={require("../images/linkedin.png")} alt="linkedIn_logo"></ImageLinkedIn>
+            <ImageTwitter  src={require("../../images/twitter.png")} alt="twitter_logo"></ImageTwitter>
+            <ImageLinkedIn  src={require("../../images/linkedin.png")} alt="linkedIn_logo"></ImageLinkedIn>
         </Container>  
 
     );

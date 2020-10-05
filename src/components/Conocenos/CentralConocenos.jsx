@@ -56,16 +56,16 @@ const CentralConocenos = ({setNextComponent}) => {
     return ( 
         <Container>
             <div>
-                <img  src={require("../images/Group4015.png")} style={{marginLeft : "104px"}} alt="1"></img>
-                <img  src={require("../images/Group4019.png")} style={{marginLeft : "164px"}} alt="2"></img>
-                <img  src={require("../images/Group4017.png")} style={{marginLeft : "164px"}} alt="3"></img>
-                <img  src={require("../images/Group4018.png")} style={{marginLeft : "164px"}} alt="4"></img>
+                <img  src={require("../../images/Group4015.png")} style={{marginLeft : "104px"}} alt="1"></img>
+                <img  src={require("../../images/Group4019.png")} style={{marginLeft : "164px"}} alt="2"></img>
+                <img  src={require("../../images/Group4017.png")} style={{marginLeft : "164px"}} alt="3"></img>
+                <img  src={require("../../images/Group4018.png")} style={{marginLeft : "164px"}} alt="4"></img>
             </div>
             <Progress style={{backgroundColor: "#FFFFFF" , width: "814px", marginTop: "15px"}}>
                 <Progress style={{backgroundColor: "#FA4D09", width: `${width}px`}}></Progress>
             </Progress>
             <TituloContainer>
-                <img  src={require("../images/Group4014.png")} alt="1"  style={{marginTop: "10px"}}></img>
+                <img  src={require("../../images/Group4014.png")} alt="1"  style={{marginTop: "10px"}}></img>
                 <PTitulo style={{marginLeft: "27px", color: "white"}}>TE QUEREMOS </PTitulo>
                 <PTitulo style={{marginLeft: "355px", color: "#FA4D09"}}>CONOCER </PTitulo>
             </TituloContainer>

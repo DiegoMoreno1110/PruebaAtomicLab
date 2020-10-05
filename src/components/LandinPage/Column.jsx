@@ -23,11 +23,11 @@ const Column = ({marginLeft, texto1, texto2, imagen}) => {
 
     return ( 
         <Container>
-            <img src={require(`../images/${imagen}.png`)} alt="5" style={{marginTop: "0px", marginLeft: "0px", position: "absolute"}}></img>
+            <img src={require(`../../images/${imagen}.png`)} alt="5" style={{marginTop: "0px", marginLeft: "0px", position: "absolute"}}></img>
             <div>
-                <img src={require("../images/ic_check_tiny.png")} alt="5" style={{marginTop: "350px", position: "relative"}}></img>
+                <img src={require("../../images/ic_check_tiny.png")} alt="5" style={{marginTop: "350px", position: "relative"}}></img>
                 <Parrafo>{texto1}</Parrafo>
-                <img src={require("../images/ic_check_tiny.png")} alt="5" style={{position: "relative"}}></img>
+                <img src={require("../../images/ic_check_tiny.png")} alt="5" style={{position: "relative"}}></img>
                 <Parrafo>{texto2}</Parrafo>
             </div>
 

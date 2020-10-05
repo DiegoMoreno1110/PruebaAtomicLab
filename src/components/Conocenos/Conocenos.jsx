@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Footer from './Footer';
+import Footer from '../MainComponents/Footer';
 import ContainerConocenos from './ContainerConocenos';
 
 

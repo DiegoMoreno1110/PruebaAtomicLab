@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import CuartaParte from './CuartaParte';
-import Footer from './Footer';
+import Footer from '../MainComponents/Footer';
 import PrimeraParte from './PrimeraParte';
 import QuintaParte from './QuintaParte';
 import SegundaParte from './SegundaParte';

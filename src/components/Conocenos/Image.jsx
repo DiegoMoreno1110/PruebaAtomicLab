@@ -12,7 +12,7 @@ const Image = () => {
     `;
 
     return ( 
-        <Imagen  src={require("../images/Group4033.png")} alt="1"></Imagen>
+        <Imagen  src={require("../../images/Group4033.png")} alt="1"></Imagen>
     );
 }
  

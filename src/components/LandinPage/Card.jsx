@@ -1,23 +1,23 @@
 import React from 'react';
 import styled from "@emotion/styled";
 
-const CardOrange = ({marginLeft, width}) => {
+const Card = ({color, marginLeft, marginTop, width, height, titulo, texto1, texto2, texto3, imagen}) => {
 
     const Cards = styled.div`
-        background-color: #FA4D09;
-        margin-top: 10px; //61
+        background-color: ${color};
+        margin-top: ${marginTop}; //61
         width: ${width};
-        height: 561px;
+        height: ${height};
         display:inline-flex;
         margin-left: ${marginLeft};
 
     `;
 
     const Line = styled.p`
-        color: white;
+        color: #FA4D09;
         text-align: center;
         font-size: 20px;
-        margin-top: 230px;
+        margin-top: 170px;
         font-weight: bold;
         position: absolute;
         margin-left: 130px;
@@ -25,43 +25,43 @@ const CardOrange = ({marginLeft, width}) => {
 
     const Titulo = styled.p`
         text-align: center;
-        color: white;
+        color:#FA4D09;
         font-size: 30px;
         font-weight: bold;
-        margin-top: 260px;
+        margin-top: 200px;
         position: absolute;
         margin-left: 114px;
     `;
 
     const Li = styled.li`
         text-align: left;
-        color: white;
-        font-size: 21px;
+        color: #072348;
+        font-size: 18px;
         margin-top: 10px;
     `;
 
     const Span = styled.span`
         font-weight: bold;
         position: absolute;
+        width: 239px;
     `;
 
     const Lista = styled.ul`
         margin-left: 30px;
-        margin-right: 50px;
-        margin-top: 300px;
+        margin-right: 20px;
+        margin-top: 250px;
         width: 100px;
     `;
 
     return ( 
         <Cards>
-            <img src={require("../images/Group4036.png")} alt="4" style={{marginTop: "20px", marginLeft: "55.5px", position: "absolute"}}></img>
+            <img src={require(`../../images/${imagen}.png`)} alt="4" style={{marginTop: "20px", marginLeft: "95.5px", position: "absolute"}}></img>
             <Line>_____ _ _____</Line>
-            <Titulo>IMAGINA</Titulo>
+            <Titulo>{titulo}</Titulo>
             <Lista>
-                <Li><Span>Estrategia Digital</Span></Li>
-                <Li><Span>Big Data & Analysis</Span></Li>                
-                <Li><Span>Consultoría Tecnológica</Span></Li>
-                <Li><Span>Reducción de costos TI</Span></Li>
+                <Li style={{marginBottom: "35px"}}><Span >{texto1}</Span></Li>
+                <Li><Span>{texto2}</Span></Li>
+                <Li><Span>{texto3}</Span></Li>
             </Lista>
 
 
@@ -69,4 +69,4 @@ const CardOrange = ({marginLeft, width}) => {
     );
 }
  
-export default CardOrange;
+export default Card;

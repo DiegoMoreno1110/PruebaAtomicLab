@@ -33,7 +33,7 @@ const Message = () => {
 
     return ( 
         <ContaineMessage>
-            <Imagen  src={require("../images/checkmark.png")} alt="1"></Imagen>
+            <Imagen  src={require("../../images/checkmark.png")} alt="1"></Imagen>
             <Parrafo>Te hemos enviado el código al número que nos proporcionaste</Parrafo>
 
         </ContaineMessage>

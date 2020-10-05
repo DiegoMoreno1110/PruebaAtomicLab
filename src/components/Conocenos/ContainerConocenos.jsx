@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import styled from "@emotion/styled";
-import Logo from './Logo';
+import Logo from '../MainComponents/Logo';
 import CentralConocenos from './CentralConocenos';
 import Image from './Image'; 
-import ContainerMensaje from './ContainerMensaje';
+import ContainerMensaje from '../Message/ContainerMensaje';
 
 const ContainerConocenos = () => {
 

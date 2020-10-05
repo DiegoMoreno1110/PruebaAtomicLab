@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import styled from "@emotion/styled";
-import Logo from './Logo';
+import Logo from '../MainComponents/Logo';
 import WhiteButton from './WhiteButton';
 
 
@@ -38,9 +38,9 @@ const Text = styled.p`
 const PrimeraParte = () => {
     return ( 
         <Fragment>
-            <Container style={{ backgroundImage: `url(require("MaskGroup1.png"))` }} >
+            <Container style={{ backgroundImage: `url(require("../../images/MaskGroup1.png"))` }} >
                 <Logo/>
-                <Imagen  src={require("../images/Group4032.png")} alt="linkedIn_logo"/>
+                <Imagen  src={require("../../images/Group4032.png")} alt="linkedIn_logo"/>
                 <DivRight>
                     <Text style={{fontSize:"62px", color:"white"}}>Desarrolla todo</Text>
                     <Text style={{fontSize:"66px", color:"#FA4D09"}}>tu POTENCIAL</Text>

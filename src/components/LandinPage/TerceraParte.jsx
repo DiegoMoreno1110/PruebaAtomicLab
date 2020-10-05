@@ -32,7 +32,7 @@ const TerceraParte = () => {
         <Container>
             <Text style={{fontSize:"50px", color:"white"}}>¡TE ENCANTARÁ</Text>
             <Text style={{fontSize:"50px", color:"#FA4D09"}}>TRABAJAR CON NOSOTROS!</Text>
-            <img src={require("../images/Group4040.png")} alt="4" style={{marginTop: "20px", width: "80%", marginLeft: "10%"}}></img>
+            <img src={require("../../images/Group4040.png")} alt="4" style={{marginTop: "20px", width: "80%", marginLeft: "10%"}}></img>
             <div>
                 <Parrafo style={{marginLeft: "108px"}}>Contratación remota</Parrafo>
                 <Parrafo style={{marginLeft: "169px"}}>Entrevista con el área de RH</Parrafo>

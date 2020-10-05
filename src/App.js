@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
-import Conocenos from './components/Conocenos';
-import LandingPage from './components/LandingPage';
-import ContainerMensaje from './components/ContainerMensaje';
+import Conocenos from './components/Conocenos/Conocenos';
+import LandingPage from './components/LandinPage/LandingPage';
+import ContainerMensaje from './components/Message/ContainerMensaje';
 
 function App() {
   return (
