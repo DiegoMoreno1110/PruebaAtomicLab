@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import styled from "@emotion/styled";
-import Logo from '../MainComponents/Logo';
-import CentralConocenos from './CentralConocenos';
 import Image from './Image'; 
-import ContainerValidaCelular from './ContainerValidaCelular';
+import CentralCodigo from './CentralCodigo';
+import ContainerTerminos from './ContainerTerminos';
 
-const ContainerConocenos = () => {
+const ContainerCodigo = () => {
 
     const Container = styled.div`
         height: 891px;
@@ -19,17 +18,16 @@ const ContainerConocenos = () => {
         <Container>
             {
                 nextComponent 
-                    ? <ContainerValidaCelular/>
-                    : [<CentralConocenos
+                    ? <ContainerTerminos/>
+                    : [<CentralCodigo
                         setNextComponent={setNextComponent}
                       />,
                       <Image
-                        image={"Group4033"}
-                    />]
+                            image={"Group4034"}
+                      />]
             }
-            
         </Container>
      );
 }
  
-export default ContainerConocenos;
+export default ContainerCodigo;

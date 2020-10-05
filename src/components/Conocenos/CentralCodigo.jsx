@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styled from "@emotion/styled";
 import OrangeButton from './OrangeButton';
+import { Link } from 'react-router-dom';
 
-const CentralConocenos = ({setNextComponent}) => {
+const CentralCodigo = ({setNextComponent}) => {
 
     const Container = styled.div`
         margin-left: 108px;
@@ -35,11 +36,11 @@ const CentralConocenos = ({setNextComponent}) => {
 
     const DivBoton = styled.div`
         margin-left: 633px;
-        margin-top: 100px;
+        margin-top: 50px;
 
     `;
 
-    const width = 125;
+    
 
     const [user, setUser] = useState({
         nombre: '',
@@ -56,40 +57,39 @@ const CentralConocenos = ({setNextComponent}) => {
     return ( 
         <Container>
             <div>
-                <img  src={require("../../images/Group4015.png")} style={{marginLeft : "104px"}} alt="1"></img>
-                <img  src={require("../../images/Group4019.png")} style={{marginLeft : "164px"}} alt="2"></img>
-                <img  src={require("../../images/Group4017.png")} style={{marginLeft : "164px"}} alt="3"></img>
+                <img  src={require("../../images/Group4016.png")} style={{marginLeft : "104px"}} alt="1"></img>
+                <img  src={require("../../images/Group4016.png")} style={{marginLeft : "164px"}} alt="2"></img>
+                <img  src={require("../../images/Group4021.png")} style={{marginLeft : "164px"}} alt="3"></img>
                 <img  src={require("../../images/Group4018.png")} style={{marginLeft : "164px"}} alt="4"></img>
             </div>
             <Progress style={{backgroundColor: "#FFFFFF" , width: "814px", marginTop: "15px"}}>
-                <Progress style={{backgroundColor: "#FA4D09", width: `${width}px`}}></Progress>
+                <Progress style={{backgroundColor: "#FA4D09", width: `515px`}}></Progress>
             </Progress>
+            <p style={{fontSize: "24px", textDecoration: "none", color: "white"}}>Regresar</p>
             <TituloContainer>
-                <img  src={require("../../images/Group4014.png")} alt="1"  style={{marginTop: "10px"}}></img>
-                <PTitulo style={{marginLeft: "27px", color: "white"}}>TE QUEREMOS </PTitulo>
-                <PTitulo style={{marginLeft: "355px", color: "#FA4D09"}}>CONOCER </PTitulo>
+                <img  src={require("../../images/Group4024.png")} alt="1"  style={{marginTop: "10px"}}></img>
+                <PTitulo style={{marginLeft: "27px", color: "white"}}>CÓDIGO DE</PTitulo>
+                <PTitulo style={{marginLeft: "285px", color: "#FA4D09"}}>VERIFICACIÓN </PTitulo>
             </TituloContainer>
 
-            <p style={{color: `${color}`, fontSize: "24px", marginTop: "55px"}}> Queremos saver qué eres tú, por favor ingresa los siguientes datos: </p>
+            <p style={{color: `${color}`, fontSize: "24px", marginTop: "55px"}}>Te enviamos un SMS al número: </p>
+            <p style={{color: `${color}`, fontSize: "20px", marginTop: "-20px"}}>+ 52 55 1850 9196 </p>
+            <p style={{color: `${color}`, fontSize: "16px", marginTop: "0px"}}>Ingresa código d e verificación:  </p>
             
             <form style={{marginBottom: "21px"}} >
-                <p style={{color: "#FFFFFF", fontSize: "21px"}}>Nombre (s)</p>
+                <p style={{color: "#FFFFFF", fontSize: "16px"}}>Código de verificación</p>
                 <TextField 
                     type="text" 
                     id="name" 
                     name="name"
                     
                 />
-                <p style={{color: "#FFFFFF", fontSize: "21px"}}>Apellidos</p>
-                <TextField 
-                    type="text" 
-                    id="apellido" 
-                    name="apellido"
-                    
-                />
+
+                <p style={{color: "#FFFFFF", fontSize: "16px"}}>¿No recibiste el código? Reenviar el código</p>
+                
                 <DivBoton>
                     <OrangeButton 
-                        texto={'Enviar'}
+                        texto={'Validar código'}
                         setNextComponent={setNextComponent}
                     />
                 </DivBoton>
@@ -103,4 +103,4 @@ const CentralConocenos = ({setNextComponent}) => {
      );
 }
  
-export default CentralConocenos;
+export default CentralCodigo;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
 
-const Image = () => {
+const Image = ({image}) => {
 
     const Imagen = styled.img`
         display: inline-flex;
@@ -12,7 +12,7 @@ const Image = () => {
     `;
 
     return ( 
-        <Imagen  src={require("../../images/Group4033.png")} alt="1"></Imagen>
+        <Imagen  src={require(`../../images/${image}.png`)} alt="1"></Imagen>
     );
 }
  
