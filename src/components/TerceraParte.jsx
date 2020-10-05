@@ -8,6 +8,7 @@ const TerceraParte = () => {
         background-color: #072348;
         width: auto;
         height: 761px;
+        padding-top: 50px;
     `;
 
     const Text = styled.p`

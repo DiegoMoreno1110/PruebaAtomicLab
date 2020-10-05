@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import Card from './Card';
+import CardOrange from './CardOrange';
 
 const SegundaParte = () => {
 
@@ -40,15 +41,33 @@ const SegundaParte = () => {
                     marginTop={"61px"}
                     width={"350px"}
                     height={"439px"}
+                    titulo={"EXPLORA"}
+                    texto1={"Innovación y creación tecnológica"}
+                    texto2={"UI/UX"} 
+                    texto3={"Innovación"}
+                    imagen={"Group4035"}
                 />    
                   
+                <CardOrange
+                    marginLeft={"0px"}
+                    width={"350px"}
+
+                />
+
                 <Card
                     color={"white"}
                     marginLeft={"0px"}
                     marginTop={"61px"}
                     width={"350px"}
                     height={"439px"}
-                />        
+                    titulo={"CONQUISTA"}
+                    texto1={"Desarrollo tecnológico a la medida"}
+                    texto2={"Ciberseguridad"} 
+                    texto3={"Servicios de la Nube"}
+                    imagen={"Group4037"}
+                />
+                
+                
             </ContainerCard>
         </Container>
 
