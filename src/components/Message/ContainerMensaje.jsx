@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import Message from './Message';
 
 
-const ContainerMensaje = () => {
+const ContainerMensaje = ({mensaje, imagen, link}) => {
 
     const Container = styled.div`
         background-color: #072348;
@@ -15,7 +15,11 @@ const ContainerMensaje = () => {
 
     return ( 
         <Container>
-            <Message/>
+            <Message
+                mensaje={mensaje}
+                imagen={imagen}
+                link={link}
+            />
         </Container>
     );
 }

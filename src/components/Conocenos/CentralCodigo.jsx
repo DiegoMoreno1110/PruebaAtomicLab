@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import styled from "@emotion/styled";
 import OrangeButton from './OrangeButton';
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 const CentralCodigo = ({setNextComponent}) => {
 
@@ -40,19 +40,32 @@ const CentralCodigo = ({setNextComponent}) => {
 
     `;
 
-    
+    const Boton = styled.button`
+        background-color:#FA4D09;
+        border: #FA4D09;
+        border-radius: 28px;
+        width: 180px;
+        height: 48px;
+        color: white;
+        font-family: Montserrat;
+        font-size: 24px;
 
-    const [user, setUser] = useState({
-        nombre: '',
-        apellidos: ''
-    });
+    `;
 
     const color = "#FFFFFF";
 
-    const handleChange = (event) => {
-        event.preventDefault();
-        setUser({ ...user, [event.target.name]: event.target.value });
-    };
+    const [message, setMessage] = useState(false);
+    const [secondMessage, setSecondMessage] = useState(false);
+
+
+    const showMessage = () =>{
+        setMessage(true);
+    }
+
+    const showSecondMessage = () => {
+        setSecondMessage(true);
+    }
+    
 
     return ( 
         <Container>
@@ -75,6 +88,20 @@ const CentralCodigo = ({setNextComponent}) => {
             <p style={{color: `${color}`, fontSize: "24px", marginTop: "55px"}}>Te enviamos un SMS al número: </p>
             <p style={{color: `${color}`, fontSize: "20px", marginTop: "-20px"}}>+ 52 55 1850 9196 </p>
             <p style={{color: `${color}`, fontSize: "16px", marginTop: "0px"}}>Ingresa código d e verificación:  </p>
+
+            {message ? 
+                
+                <Redirect to='/messageCodigo'/>
+                
+                
+                : null}
+
+            {secondMessage ? 
+                
+                <Redirect to='/messageEnviar'/>
+                
+                
+                : null}
             
             <form style={{marginBottom: "21px"}} >
                 <p style={{color: "#FFFFFF", fontSize: "16px"}}>Código de verificación</p>
@@ -85,13 +112,11 @@ const CentralCodigo = ({setNextComponent}) => {
                     
                 />
 
-                <p style={{color: "#FFFFFF", fontSize: "16px"}}>¿No recibiste el código? Reenviar el código</p>
+                <p style={{color: "#FFFFFF", fontSize: "16px"}}>¿No recibiste el código?</p>
+                <button type="submit" onClick={showSecondMessage}>Reenviar codigo</button>
                 
                 <DivBoton>
-                    <OrangeButton 
-                        texto={'Validar código'}
-                        setNextComponent={setNextComponent}
-                    />
+                    <Boton type="submit" onClick={showMessage}>Continuar</Boton>
                 </DivBoton>
                 
             </form>

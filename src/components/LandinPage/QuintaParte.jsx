@@ -43,42 +43,44 @@ const QuintaParte = () => {
         <Container>
             <ContainerTable>
                 <Tabla>
-                    <tr>
-                        <Th style={{fontSize: "20px"}}>CARACTERÍSTICAS</Th>
-                        <Th style={{textAlign: "center", fontSize: "20px"}}>OTROS</Th>
-                        <Th style={{textAlign: "center", fontSize: "31px"}}>ATOMIC</Th>
-                    </tr>
-                    <tr>
-                        <Td style={{width: "669px"}}>Equipo inclusivo, honesto y auténtico</Td>
-                        <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
-                        <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
-                    </tr>
-                    <tr>
-                        <Td>Puntualidad es nuestro segundo nombre</Td>
-                        <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
-                        <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
-                    </tr>
-                    <tr>
-                        <Td>Siempre innovamos en nuestros productos</Td>
-                        <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
-                        <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
-                    </tr>
-                    <tr>
-                        <Td>Te ayudamos a crecer e implementar nuevos conocimientos</Td>
-                        <Td style={{textAlign: "center"}}></Td>
-                        <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
-                    </tr>
-                    
-                    <tr>
-                        <Td>Nos preocupamos por tu bienestar</Td>
-                        <Td style={{textAlign: "center"}}></Td>
-                        <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
-                    </tr>
-                    <tr>
-                        <Td>El respeto es una parte fundamental</Td>
-                        <Td style={{textAlign: "center"}}></Td>
-                        <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <Th style={{fontSize: "20px"}}>CARACTERÍSTICAS</Th>
+                            <Th style={{textAlign: "center", fontSize: "20px"}}>OTROS</Th>
+                            <Th style={{textAlign: "center", fontSize: "31px"}}>ATOMIC</Th>
+                        </tr>
+                        <tr>
+                            <Td style={{width: "669px"}}>Equipo inclusivo, honesto y auténtico</Td>
+                            <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
+                            <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
+                        </tr>
+                        <tr>
+                            <Td>Puntualidad es nuestro segundo nombre</Td>
+                            <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
+                            <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
+                        </tr>
+                        <tr>
+                            <Td>Siempre innovamos en nuestros productos</Td>
+                            <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
+                            <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
+                        </tr>
+                        <tr>
+                            <Td>Te ayudamos a crecer e implementar nuevos conocimientos</Td>
+                            <Td style={{textAlign: "center"}}></Td>
+                            <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
+                        </tr>
+                        
+                        <tr>
+                            <Td>Nos preocupamos por tu bienestar</Td>
+                            <Td style={{textAlign: "center"}}></Td>
+                            <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
+                        </tr>
+                        <tr>
+                            <Td>El respeto es una parte fundamental</Td>
+                            <Td style={{textAlign: "center"}}></Td>
+                            <Td style={{textAlign: "center"}}><img src={require("../../images/ic_check_tiny.png")} alt="5"></img></Td>
+                        </tr>
+                    </tbody>
                 </Tabla>
 
             </ContainerTable>

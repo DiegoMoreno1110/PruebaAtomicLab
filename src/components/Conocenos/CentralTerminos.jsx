@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from "@emotion/styled";
 import OrangeButton from './OrangeButton';
-import { Link } from 'react-router-dom';
 
 const CentralTerminos = ({setNextComponent}) => {
 
@@ -42,17 +41,8 @@ const CentralTerminos = ({setNextComponent}) => {
 
     const width = 175;
 
-    const [user, setUser] = useState({
-        nombre: '',
-        apellidos: ''
-    });
-
     const color = "#FFFFFF";
 
-    const handleChange = (event) => {
-        event.preventDefault();
-        setUser({ ...user, [event.target.name]: event.target.value });
-    };
 
     return ( 
         <Container>

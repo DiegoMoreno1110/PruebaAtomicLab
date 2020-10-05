@@ -20,9 +20,11 @@ const ContainerValidaCelular = () => {
                 nextComponent 
                     ? <ContainerCodigo/>
                     : [<CentralValidaCelular
+                        key={1}
                         setNextComponent={setNextComponent}
                       />,
                       <Image
+                            key={2}
                             image={"Group4034"}
                         />]
             }

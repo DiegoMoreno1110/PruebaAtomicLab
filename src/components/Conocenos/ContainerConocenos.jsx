@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styled from "@emotion/styled";
-import Logo from '../MainComponents/Logo';
 import CentralConocenos from './CentralConocenos';
 import Image from './Image'; 
 import ContainerValidaCelular from './ContainerValidaCelular';
@@ -21,9 +20,12 @@ const ContainerConocenos = () => {
                 nextComponent 
                     ? <ContainerValidaCelular/>
                     : [<CentralConocenos
+                        key={1}
                         setNextComponent={setNextComponent}
+                        nextComponent={nextComponent}
                       />,
                       <Image
+                        key={2}
                         image={"Group4033"}
                     />]
             }

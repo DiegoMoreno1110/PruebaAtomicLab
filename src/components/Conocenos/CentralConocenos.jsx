@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from "@emotion/styled";
-import OrangeButton from './OrangeButton';
+import Error from './Error';
 
-const CentralConocenos = ({setNextComponent}) => {
+const CentralConocenos = ({setNextComponent, nextComponent}) => {
 
     const Container = styled.div`
         margin-left: 108px;
@@ -39,19 +39,54 @@ const CentralConocenos = ({setNextComponent}) => {
 
     `;
 
+    const Boton = styled.button`
+        background-color:#FA4D09;
+        border: #FA4D09;
+        border-radius: 28px;
+        width: 180px;
+        height: 48px;
+        color: white;
+        font-family: Montserrat;
+        font-size: 24px;
+
+    `;
+
     const width = 125;
-
-    const [user, setUser] = useState({
-        nombre: '',
-        apellidos: ''
-    });
-
     const color = "#FFFFFF";
 
-    const handleChange = (event) => {
-        event.preventDefault();
-        setUser({ ...user, [event.target.name]: event.target.value });
-    };
+    const [usuario, setUsuario] = useState({
+        
+        apellido: '',
+        name: '',
+    });
+
+    const [error, setError] = useState(false);
+
+    const actualizarState = (e) => {
+        setUsuario({
+            ...usuario,
+            [e.target.name]: e.target.value 
+        })
+    }
+
+    const {name, apellido} = usuario;
+
+    const submitUser = e =>{
+        e.preventDefault();
+
+        if(name.length < 5){
+            console.log('Menor')
+            setError(true);
+            return;
+        }
+
+        
+        setNextComponent(true);
+
+
+    }
+
+ 
 
     return ( 
         <Container>
@@ -70,33 +105,34 @@ const CentralConocenos = ({setNextComponent}) => {
                 <PTitulo style={{marginLeft: "355px", color: "#FA4D09"}}>CONOCER </PTitulo>
             </TituloContainer>
 
-            <p style={{color: `${color}`, fontSize: "24px", marginTop: "55px"}}> Queremos saver qué eres tú, por favor ingresa los siguientes datos: </p>
+            <p style={{color: `${color}`, fontSize: "24px", marginTop: "55px"}}> Queremos saber qué eres tú, por favor ingresa los siguientes datos: </p>
             
-            <form style={{marginBottom: "21px"}} >
+            <form style={{marginBottom: "21px"}}>
                 <p style={{color: "#FFFFFF", fontSize: "21px"}}>Nombre (s)</p>
                 <TextField 
                     type="text" 
-                    id="name" 
                     name="name"
+                    value={name}
+                    onChange={actualizarState}
                     
                 />
+                {error ? <Error/> : null}
+
                 <p style={{color: "#FFFFFF", fontSize: "21px"}}>Apellidos</p>
                 <TextField 
                     type="text" 
-                    id="apellido" 
                     name="apellido"
+                    onChange={actualizarState}
+                    value={apellido}
                     
                 />
+                
                 <DivBoton>
-                    <OrangeButton 
-                        texto={'Enviar'}
-                        setNextComponent={setNextComponent}
-                    />
+                    <Boton type="submit" onClick={submitUser}>Enviar</Boton>
                 </DivBoton>
                 
             </form>
 
-            
         </Container>
             
 

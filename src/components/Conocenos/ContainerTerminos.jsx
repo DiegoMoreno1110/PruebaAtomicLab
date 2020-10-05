@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from "@emotion/styled";
 import Image from './Image'; 
 import CentralTerminos from './CentralTerminos';

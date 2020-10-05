@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "@emotion/styled";
+import { Redirect } from 'react-router-dom';
 
 
-const Message = () => {
+const Message = ({mensaje, imagen, link}) => {
 
     const ContaineMessage = styled.div`
         width: 30vw;
@@ -31,10 +32,22 @@ const Message = () => {
         top: 60%;
     `;
 
+    const [show, setShow] = useState(false)
+
+    setTimeout(() =>{
+        setShow(true);
+
+    }, 3000);
+
+    clearTimeout();
+
+
+
     return ( 
         <ContaineMessage>
-            <Imagen  src={require("../../images/checkmark.png")} alt="1"></Imagen>
-            <Parrafo>Te hemos enviado el código al número que nos proporcionaste</Parrafo>
+            <Imagen  src={require(`../../images/${imagen}.png`)} alt="1"></Imagen>
+            <Parrafo>{mensaje}</Parrafo>
+            {show ? <Redirect to={`/${link}`} /> : null}
 
         </ContaineMessage>
     );

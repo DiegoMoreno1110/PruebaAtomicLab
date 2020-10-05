@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState}  from 'react';
 import styled from "@emotion/styled";
-import OrangeButton from './OrangeButton';
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 const CentralValidaCelular = ({setNextComponent}) => {
 
@@ -40,19 +39,29 @@ const CentralValidaCelular = ({setNextComponent}) => {
 
     `;
 
-    const width = 175;
+    const Boton = styled.button`
+        background-color:#FA4D09;
+        border: #FA4D09;
+        border-radius: 28px;
+        width: 180px;
+        height: 48px;
+        color: white;
+        font-family: Montserrat;
+        font-size: 24px;
 
-    const [user, setUser] = useState({
-        nombre: '',
-        apellidos: ''
-    });
+    `;
 
     const color = "#FFFFFF";
 
-    const handleChange = (event) => {
-        event.preventDefault();
-        setUser({ ...user, [event.target.name]: event.target.value });
-    };
+    const [message, setMessage] = useState(false);
+
+
+    const showMessage = () =>{
+        
+
+        setMessage(true);
+
+    }
 
     return ( 
         <Container>
@@ -75,6 +84,13 @@ const CentralValidaCelular = ({setNextComponent}) => {
             <p style={{color: `${color}`, fontSize: "24px", marginTop: "55px"}}>Necesitamos validar tu número para continuar </p>
             <p style={{color: `${color}`, fontSize: "20px"}}>Ingresa tu número a 10 dígitos y te enviaremos un código SMS </p>
             
+            {message ? 
+                
+                <Redirect to='/message' />
+                
+                
+                : null}
+
             <form style={{marginBottom: "21px"}} >
                 <p style={{color: "#FFFFFF", fontSize: "21px"}}>Número de celular</p>
                 <TextField 
@@ -85,10 +101,7 @@ const CentralValidaCelular = ({setNextComponent}) => {
                 />
                 
                 <DivBoton>
-                    <OrangeButton 
-                        texto={'Continuar'}
-                        setNextComponent={setNextComponent}
-                    />
+                    <Boton type="submit" onClick={showMessage}>Continuar</Boton>
                 </DivBoton>
                 
             </form>
