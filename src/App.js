@@ -3,7 +3,10 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Codigo from './components/Conocenos/Codigo';
 import Conocenos from './components/Conocenos/Conocenos';
 import ContainerCodigo from './components/Conocenos/ContainerCodigo';
+import Edit from './components/Conocenos/Edit';
+import Exito from './components/Conocenos/Exito';
 import Terminos from './components/Conocenos/Terminos';
+import Valida from './components/Conocenos/Valida';
 import LandingPage from './components/LandinPage/LandingPage';
 import ContainerMensaje from './components/Message/ContainerMensaje';
 
@@ -55,6 +58,16 @@ function App() {
         <Route exact path="/terminos">
           <Terminos/>
         </Route>
+        <Route exact path="/valida">
+          <Valida/>
+        </Route>
+        <Route exact path="/edita">
+          <Edit/>
+        </Route>
+        <Route exact path="/exito">
+          <Exito/>
+        </Route>
+
 
       </Switch>
     </BrowserRouter>

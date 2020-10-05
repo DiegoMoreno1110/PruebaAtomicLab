@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import styled from "@emotion/styled";
-import OrangeButton from './OrangeButton';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 const CentralCodigo = ({setNextComponent}) => {
 
@@ -58,14 +57,10 @@ const CentralCodigo = ({setNextComponent}) => {
     const [secondMessage, setSecondMessage] = useState(false);
 
 
+
     const showMessage = () =>{
         setMessage(true);
-    }
-
-    const showSecondMessage = () => {
-        setSecondMessage(true);
-    }
-    
+    } 
 
     return ( 
         <Container>
@@ -78,7 +73,7 @@ const CentralCodigo = ({setNextComponent}) => {
             <Progress style={{backgroundColor: "#FFFFFF" , width: "814px", marginTop: "15px"}}>
                 <Progress style={{backgroundColor: "#FA4D09", width: `515px`}}></Progress>
             </Progress>
-            <p style={{fontSize: "24px", textDecoration: "none", color: "white"}}>Regresar</p>
+            <Link to='/valida'><p style={{fontSize: "24px", textDecoration: "none", color: "white"}}>Regresar</p></Link>
             <TituloContainer>
                 <img  src={require("../../images/Group4024.png")} alt="1"  style={{marginTop: "10px"}}></img>
                 <PTitulo style={{marginLeft: "27px", color: "white"}}>CÓDIGO DE</PTitulo>
@@ -87,6 +82,9 @@ const CentralCodigo = ({setNextComponent}) => {
 
             <p style={{color: `${color}`, fontSize: "24px", marginTop: "55px"}}>Te enviamos un SMS al número: </p>
             <p style={{color: `${color}`, fontSize: "20px", marginTop: "-20px"}}>+ 52 55 1850 9196 </p>
+            <Link to='/edita'><p style={{fontSize: "20px", textDecoration: "none", color: "white"}}>Editar</p></Link>
+            
+
             <p style={{color: `${color}`, fontSize: "16px", marginTop: "0px"}}>Ingresa código d e verificación:  </p>
 
             {message ? 
@@ -113,7 +111,7 @@ const CentralCodigo = ({setNextComponent}) => {
                 />
 
                 <p style={{color: "#FFFFFF", fontSize: "16px"}}>¿No recibiste el código?</p>
-                <button type="submit" onClick={showSecondMessage}>Reenviar codigo</button>
+                <Link to='/messageEnviar'><p style={{fontSize: "16px", textDecoration: "none", color: "white"}}>Reenviar código</p></Link>
                 
                 <DivBoton>
                     <Boton type="submit" onClick={showMessage}>Continuar</Boton>

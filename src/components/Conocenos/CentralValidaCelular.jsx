@@ -1,6 +1,6 @@
 import React, {useState}  from 'react';
 import styled from "@emotion/styled";
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 const CentralValidaCelular = ({setNextComponent}) => {
 
@@ -74,7 +74,7 @@ const CentralValidaCelular = ({setNextComponent}) => {
             <Progress style={{backgroundColor: "#FFFFFF" , width: "814px", marginTop: "15px"}}>
                 <Progress style={{backgroundColor: "#FA4D09", width: `320px`}}></Progress>
             </Progress>
-            <p style={{fontSize: "24px", textDecoration: "none", color: "white"}}>Regresar</p>
+            <Link to='/conocenos'><p style={{fontSize: "24px", textDecoration: "none", color: "white"}}>Regresar</p></Link>
             <TituloContainer>
                 <img  src={require("../../images/Group4023.png")} alt="1"  style={{marginTop: "10px"}}></img>
                 <PTitulo style={{marginLeft: "27px", color: "white"}}>VALIDA TU </PTitulo>
