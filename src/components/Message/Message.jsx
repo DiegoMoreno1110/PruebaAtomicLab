@@ -31,7 +31,7 @@ const Message = ({mensaje, imagen, link}) => {
         font-size: 20px;
         position: absolute;
         top: 60%;
-        margin-left: 0px;
+        margin-left: 50px;
         
     `;
 
